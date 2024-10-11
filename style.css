@@ -1,17 +1,35 @@
-.navbar{
+.navbar {
     background-color: lightblue;
     color: white;
-}
-.navbar li{
-    font-size: 20px;
+    padding: 10px;
+    width: auto; 
 }
 
-h1{
-    color: white;
-    background-color:lightgrey;
-    
+.navbar ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: flex-end; 
 }
-p{
+
+
+.navbar li {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    margin-right: 15px; 
+    cursor: pointer; 
+}
+
+
+h1 {
     color: white;
-    background-color:lightblue;
+    background-color: lightgrey;
+}
+
+p {
+    color: white;
+    background-color: lightblue;
 }
