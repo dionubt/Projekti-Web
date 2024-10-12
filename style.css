@@ -9,16 +9,16 @@ body, html {
 }
 
 body {
-    background-image: url('ae6dc78efb8c332e22e3d3218565a43d.jpg'); /* Replace with your high-resolution image */
-    background-size: cover; /* Use cover for full coverage */
+    background-image: url('rUj3XZGdPVBxb8NaiaKnWQ.jpg');
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* Prevents image from repeating */
-    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
 }
 
 nav {
-    background-color: transparent; /* Set the navbar to transparent */
+    background-color: transparent;
     padding: 10px;
 }
 
@@ -30,13 +30,38 @@ ul {
 }
 
 li a {
-    text-decoration: none;
-    color: #fff; /* Change text color to white for better visibility */
+    text-decoration:none;
+    color:rgb(255, 255, 255);
     font-size: 18px;
     padding: 0 15px;
-    font-weight: bold; /* Makes the font bold */
+    font-weight: bold;
 }
 
 li a:hover {
-    color: lightblue; /* Change hover color for better visibility */
+    color: rgb(253, 6, 6);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px auto; /* Center the section */
+    color: #fff;
+}
+
+.text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.image {
+    flex: 0 0 600px; /* Ensures the image takes up 450px */
+    padding-top: 20px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
 }
