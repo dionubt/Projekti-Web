@@ -3,20 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar with Log In</title>
-  <link rel="stylesheet" href="dd.css">
+  <title>FlyHigh Tickets</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">YourLogo</div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="index.html">Home</a></li> <!-- Link to Home page -->
+      <li><a href="#aboutUs">About</a></li> <!-- Link to About section -->
       <li><a href="#">Services</a></li>
       <li><a href="#">Contact</a></li>
-      <li><button class="login-btn">Log In</button></li>
+      <li><button class="login-btn" id="loginBtn">Log In</button></li>
     </ul>
   </nav>
+
+  <!-- Log In Form Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeLogin">&times;</span>
+      <h2>Log In</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        
+        <button type="submit" class="submit-btn">Log In</button>
+        <p>Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sign Up Form Modal -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeSignup">&times;</span>
+      <h2>Sign Up</h2>
+      <form>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="username">Username</label>
+        <input type="text" id="usernameSignup" name="username" placeholder="Choose a username" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="passwordSignup" name="password" placeholder="Create a password" required>
+        
+        <button type="submit" class="submit-btn">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#" id="loginLink">Go to Log In</a></p>
+    </div>
+  </div>
+
+  <div class="intro-section">
+    <h1>Welcome to FlyHigh Tickets</h1>
+    <p>
+        Experience seamless travel planning with FlyHigh Tickets. We offer the best deals on airplane tickets, 
+        helping you explore the world effortlessly. Whether you're booking a family vacation, a business trip, 
+        or a spontaneous getaway, our user-friendly platform ensures you find the perfect flights at unbeatable 
+        prices. Start your journey with us today!
+    </p>
+  </div>
+
+  <!-- About Us Section -->
+  <section id="aboutUs" class="about-us">
+    <h2>About Us</h2>
+    <p>
+        At FlyHigh Tickets, we strive to make travel easy and accessible for everyone. Our goal is to provide the best deals on airplane tickets to help you explore the world effortlessly.
+    </p>
+    <h3>Our Values</h3>
+    <p>
+        We believe in customer satisfaction, transparency, and innovation. Our vision is to enhance your travel experience with unbeatable prices and exceptional service.
+    </p>
+    <h3>Meet the Team</h3>
+    <div class="team-member">
+        <img src="team-member1.jpg" alt="Team Member 1">
+        <h4>John Doe</h4>
+        <p>Co-Founder & CEO</p>
+    </div>
+    <div class="team-member">
+        <img src="team-member2.jpg" alt="Team Member 2">
+        <h4>Jane Smith</h4>
+        <p>Chief Operations Officer</p>
+    </div>
+    <h3>Our Story</h3>
+    <p>
+        Founded in 2024, FlyHigh Tickets began with a vision to simplify air travel. We've helped thousands of travelers find their perfect flights.
+    </p>
+    <h3>Get Started!</h3>
+    <p>
+        Ready to start your journey? <a href="#">Explore our ticket options today!</a>
+    </p>
+  </section>
+
+  <script src="scripts.js"></script> <!-- Link to JavaScript -->
 </body>
 </html>
-
