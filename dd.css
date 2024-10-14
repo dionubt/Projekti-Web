@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('samsung-memory-pz67hBsfbJ4-unsplash.jpg'); /* Add your background image */
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px; /* Reduced padding to make the navbar smaller */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Fading light black */
+    color: white;
+  }
+  
+  .navbar .logo {
+    font-size: 18px; /* Reduced font size for the logo */
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar ul li {
+    margin-left: 10px; /* Reduced space between navbar items */
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Reduced font size for navbar items */
+  }
+  
+  .navbar ul li a:hover {
+    color: #ddd;
+  }
+  
+  .login-btn {
+    padding: 5px 10px; /* Reduced padding for the button */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Reduced font size for the button */
+    margin-left: 10px; /* Reduced space before the button */
+  }
+  
+  .login-btn:hover {
+    background-color: #0056b3;
+  }
+  
