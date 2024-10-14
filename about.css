@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(''); /* Add your background image */
+    background-size: cover;  
+    background-position: center; 
+    background-attachment: fixed;
+  }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    color: white;
+    backdrop-filter: blur(8px); 
+  }
+  
+  .navbar .logo {
+    font-size: 22px; 
+    font-weight: bold;
+    letter-spacing: 1px; 
+    color: #ffffff;
+    text-transform: uppercase; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .logo:hover {
+    color: #f0a500; 
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar ul li {
+    margin-left: 20px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #f0a500; 
+  }
+  .navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #f0a500; 
+  }
+  
+  .login-btn {
+    padding: 6px 14px;
+    background-color: #f0a500; 
+    color: white;
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, box-shadow 0.3s; 
+  }
+  
+  .login-btn:hover {
+    background-color: #d48806; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+  }
+  
+  .about-section {
+    display: flex;
+    background-color: white; /* White background */
+    padding: 50px; /* Padding for the section */
+  }
+  
+  .about-image {
+    flex: 1; /* Take up 50% of the space */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image vertically */
+  }
+  
+  .about-text {
+    flex: 1; /* Take up 50% of the space */
+    padding: 20px; /* Add padding */
+  }
+  
+  .airplane-img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Limit max height for the image */
+  }
+  
