@@ -1,12 +1,12 @@
-/* General Reset */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('GettyImages-1442286876.webp'); /* Add your background image */
-    background-size: cover;  
-    background-position: center; 
+    background-image: url('GettyImages-1442286876.webp');
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -15,6 +15,15 @@ body {
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
+}
+
+.header .logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    transition: color 0.3s ease;
 }
 
 .header ul {
@@ -39,97 +48,69 @@ body {
 }
 
 .header ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: #f0a500; 
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f0a500;
 }
 
-.login-btn {
-    padding: 6px 14px;
-    background-color: #f0a500; 
-    color: white;
-    border: none;
-    border-radius: 20px; 
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s, box-shadow 0.3s; 
-}
-
-.login-btn:hover {
-    background-color: #d48806; 
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
-}
-
-/* Form Section Styling */
-.login-container {
+.center-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Center the form vertically */
-}
-
-.login-form {
-    background-color: white;
+    height: calc(100vh - 60px);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+}
+
+.auth-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 100%;
+    max-width: 400px;
 }
 
-.login-form h2 {
+.auth-form h2 {
     margin-bottom: 20px;
+    color: #333;
 }
 
-.login-form label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.login-form input {
+.auth-form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border-radius: 5px;
     border: 1px solid #ccc;
-}
-
-.login-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #f0a500; /* Yellow button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 4px;
     font-size: 16px;
 }
 
-.login-form button:hover {
-    background-color: #d48806; /* Darker yellow on hover */
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f0a500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.login-form p {
+.auth-form button:hover {
+    background-color: #d48806;
+}
+
+.auth-form p {
     margin-top: 15px;
     font-size: 14px;
 }
 
-.login-form a {
-    color: blue; /* Blue color for the link */
+.auth-form a {
+    color: #f0a500;
     text-decoration: none;
 }
 
-.login-form a:hover {
+.auth-form a:hover {
     text-decoration: underline;
 }
 
-/* Footer Styling */
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #555;
-}
+
