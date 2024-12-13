@@ -1,38 +1,35 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(''); /* Add your background image */
+    background-image: url('GettyImages-1442286876.webp'); /* Add your background image */
     background-size: cover;  
     background-position: center; 
     background-attachment: fixed;
   }
-.navbar {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 15px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
-    backdrop-filter: blur(8px); 
   }
   
-  .navbar .logo {
+  .header .logo {
     font-size: 22px; 
     font-weight: bold;
     letter-spacing: 1px; 
-    color: #ffffff;
-    text-transform: uppercase; 
+    color: #ffffff; /* Default color */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth transition */
   }
   
-  .navbar .logo:hover {
-    color: #f0a500; 
+  .header .logo:hover {
+    color: #f0a500; /* Change this color to your desired hover color */
   }
   
-  .navbar ul {
+  .header ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -40,11 +37,11 @@ body {
     align-items: center;
   }
   
-  .navbar ul li {
+  .header ul li {
     margin-left: 20px;
   }
   
-  .navbar ul li a {
+  .header ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -53,47 +50,62 @@ body {
     transition: background-color 0.3s, color 0.3s;
   }
   
-  .navbar ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: #f0a500; 
-  }
-  .navbar ul li a:hover {
+  .header ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2); 
     color: #f0a500; 
   }
   
-  .login-btn {
-    padding: 6px 14px;
-    background-color: #f0a500; 
-    color: white;
-    border: none;
-    border-radius: 20px; 
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s, box-shadow 0.3s; 
+  
+  
+  
+  .about-us-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 50px; /* Add padding for spacing */
+    background-color: transparent; /* Set background to transparent */
   }
   
-  .login-btn:hover {
-    background-color: #d48806; 
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+  .about-us-text {
+    flex: 1; /* Allow text section to take available space */
+    margin-right: 20px; /* Add spacing between text and image */
+    color: white; /* Set text color to white */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
+    padding: 20px; /* Add padding inside the text container */
+    border-radius: 8px; /* Rounded corners for the background */
   }
   
-  .about-section {
+  .about-us-image {
+    flex: 1; /* Allow image section to take available space */
+  }
+  
+  .about-us-image img {
+    width: 100%; /* Set image to take full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 800px; /* Set a maximum width for the image */
+    display: block; /* Remove any gap below the image */
+    margin: 0 auto; /* Center the image */
+  }
+  
+  
+  
+  
+
+  /*new code*/
+  .contact-section {
     display: flex;
-    background-color: white; /* White background */
     padding: 50px; /* Padding for the section */
+    background-color: #f9f9f9; /* Light gray background */
   }
   
-  .about-image {
+  .contact-image {
     flex: 1; /* Take up 50% of the space */
     display: flex;
     justify-content: center; /* Center the image */
     align-items: center; /* Center the image vertically */
   }
   
-  .about-text {
+  .contact-form {
     flex: 1; /* Take up 50% of the space */
     padding: 20px; /* Add padding */
   }
@@ -104,3 +116,49 @@ body {
     max-height: 400px; /* Limit max height for the image */
   }
   
+  .contact-form h2 {
+    margin-bottom: 20px; /* Space below heading */
+  }
+  
+  .contact-form label {
+    margin-top: 10px; /* Space above labels */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-btn {
+    background-color: #f0a500;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .submit-btn:hover {
+    background-color: #d48806;
+  }
+
+  .footer {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 14px;
+  }
+  .footer a {
+    color: #f39c12;
+    transition: color 0.3s ease;
+  }
+  .footer a:hover {
+    color: #f1c40f; /* Lighter accent on hover */
+  }
