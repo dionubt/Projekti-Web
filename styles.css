@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('GettyImages-1442286876.webp'); /* Add your background image */
+  background-size: cover;  
+  background-position: center; 
+  background-attachment: fixed;
+
+  /* Flexbox adjustments to ensure footer stays at the bottom */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
+}
+
+.intro-section {
+  flex-grow: 1; /* This will make the intro section take up the available space */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.header .logo {
+  font-size: 22px; 
+  font-weight: bold;
+  letter-spacing: 1px; 
+  color: #ffffff; /* Default color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.header .logo:hover {
+  color: #f0a500; /* Change this color to your desired hover color */
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.header ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #f0a500; 
+}
+
+
+
+
+
+
+
+.intro-section {
+  text-align: center;
+  margin: 50px 0;
+  padding: 30px;
+  position: relative; /* Allow for positioning of pseudo-elements if needed */
+}
+
+.intro-section h1 {
+  font-size: 2.5rem; /* Smaller font size for the heading */
+  color: #fff; /* White color for contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
+  margin-bottom: 15px; /* Spacing below the heading */
+  background-color: #f0a500; /* Orange background with transparency */
+  padding: 5px; /* Add some padding for the backgroud */
+  display: inline-block; /* Allows background to wrap around the text */
+}
+
+.intro-section p {
+  font-size: 1.2rem; /* Smaller font size for the paragraph */
+  color: #fff; /* White color for contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for better readability */
+  max-width: 800px; /* Limit the width for readability */
+  margin: 0 auto; /* Center the paragraph */
+  line-height: 1.6; /* Improved line spacing */
+  padding: 10px; /* Padding around the text */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker transparent background */
+  border-radius: 8px; /* Rounded corners for the background */
+}
+
+/* Footer Styles */
+.footer {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  font-size: 14px;
+}
+.footer a {
+  color: #f39c12;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #f1c40f; /* Lighter accent on hover */
+}
