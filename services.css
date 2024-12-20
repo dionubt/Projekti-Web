@@ -3,21 +3,26 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  .navbar {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 15px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
   }
   
-  .navbar .logo {
+  .header .logo {
     font-size: 22px; 
     font-weight: bold;
+    letter-spacing: 1px; 
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
+    transition: color 0.3s ease;
   }
   
-  .navbar ul {
+  .header ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -25,9 +30,24 @@ body {
     align-items: center;
   }
   
-  .navbar ul li {
+  .header ul li {
     margin-left: 20px;
   }
+  
+  .header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .header ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #f0a500; 
+  }
+  
   
   .services-section {
     padding: 50px; /* Add padding to the section */
