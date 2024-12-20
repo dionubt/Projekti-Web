@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('GettyImages-1442286876.webp'); /* Add your background image */
+    background-image: url('img/GettyImages-1442286876.webp'); /* Add your background image */
     background-size: cover;  
     background-position: center; 
     background-attachment: fixed;
@@ -87,7 +87,21 @@ body {
     margin: 0 auto; /* Center the image */
   }
   
-  
+  .footer {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 14px;
+  }
+  .footer a {
+    color: #f39c12;
+    transition: color 0.3s ease;
+  }
+  .footer a:hover {
+    color: #f1c40f; /* Lighter accent on hover */
+  }
   
   
 
@@ -147,18 +161,4 @@ body {
     background-color: #d48806;
   }
 
-  .footer {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    font-size: 14px;
-  }
-  .footer a {
-    color: #f39c12;
-    transition: color 0.3s ease;
-  }
-  .footer a:hover {
-    color: #f1c40f; /* Lighter accent on hover */
-  }
+ 
