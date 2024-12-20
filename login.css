@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('GettyImages-1442286876.webp');
+    background-image: url('img/GettyImages-1442286876.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -25,6 +25,10 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     transition: color 0.3s ease;
 }
+
+.header .logo:hover {
+    color: #f0a500; /* Change this color to your desired hover color */
+  }
 
 .header ul {
     list-style: none;
@@ -113,4 +117,18 @@ body {
     text-decoration: underline;
 }
 
-
+.footer {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 14px;
+  }
+  .footer a {
+    color: #f39c12;
+    transition: color 0.3s ease;
+  }
+  .footer a:hover {
+    color: #f1c40f; /* Lighter accent on hover */
+  }
