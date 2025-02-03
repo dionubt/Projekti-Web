@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $role = 'user';  // Default role is 'user'
 
     // Check if username or email already exists
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username OR email = :email");
@@ -31,10 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
         // Insert new user into the database
-        $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+        $stmt = $pdo->prepare("INSERT INTO users (username, email, password, role) VALUES (:username, :email, :password, :role)");
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':password', $hashedPassword);
+        $stmt->bindParam(':role', $role); // Insert the role
 
         if ($stmt->execute()) {
             echo "<script>alert('Sign-up successful!'); window.location.href = 'login.php';</script>";
@@ -59,11 +61,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <header class="header">
         <div class="logo">FlyHigh</div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.php">Log In</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            |<li><a href="login.php">Log In</a></li>
             <li><a href="signup.php">Sign Up</a></li>
         </ul>
     </header>
@@ -78,5 +80,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>Already have an account? <a href="login.php">Log In</a></p>
         </form>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 FlyHigh Tickets. All Rights Reserved.</p>
+        <p>
+            <a href="services.html">Services</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </footer>
 </body>
 </html>
