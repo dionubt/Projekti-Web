@@ -1,4 +1,4 @@
-// Login Page Logic
+
 const signupLink = document.getElementById('signup-link');
 const signupModal = document.getElementById('signup-modal');
 const closeModal = document.getElementById('close-modal');
@@ -20,7 +20,7 @@ if (signupLink && signupModal && closeModal) {
     });
 }
 
-// Sign-Up Page Logic
+
 const signupForm = document.querySelector('.auth-form');
 if (signupForm) {
     signupForm.addEventListener('submit', function (event) {
@@ -29,7 +29,7 @@ if (signupForm) {
         const password = document.querySelector('input[type="password"]').value.trim();
 
         if (!username || !email || !password) {
-            event.preventDefault(); // Prevent form submission
+            event.preventDefault(); 
             alert('All fields are required!');
         } else if (!/\S+@\S+\.\S+/.test(email)) {
             event.preventDefault();

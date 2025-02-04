@@ -1,164 +1,156 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('img/GettyImages-1442286876.webp'); /* Add your background image */
-    background-size: cover;  
-    background-position: center; 
-    background-attachment: fixed;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 15px;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    color: white;
-  }
-  
-  .header .logo {
-    font-size: 22px; 
-    font-weight: bold;
-    letter-spacing: 1px; 
-    color: #ffffff; /* Default color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
-    transition: color 0.3s ease; /* Smooth transition */
-  }
-  
-  .header .logo:hover {
-    color: #f0a500; /* Change this color to your desired hover color */
-  }
-  
-  .header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .header ul li {
-    margin-left: 20px;
-  }
-  
-  .header ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 6px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .header ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: #f0a500; 
-  }
-  
-  
-  
-  
-  .about-us-section {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space items evenly */
-    padding: 50px; /* Add padding for spacing */
-    background-color: transparent; /* Set background to transparent */
-  }
-  
-  .about-us-text {
-    flex: 1; /* Allow text section to take available space */
-    margin-right: 20px; /* Add spacing between text and image */
-    color: white; /* Set text color to white */
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
-    padding: 20px; /* Add padding inside the text container */
-    border-radius: 8px; /* Rounded corners for the background */
-  }
-  
-  .about-us-image {
-    flex: 1; /* Allow image section to take available space */
-  }
-  
-  .about-us-image img {
-    width: 100%; /* Set image to take full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 800px; /* Set a maximum width for the image */
-    display: block; /* Remove any gap below the image */
-    margin: 0 auto; /* Center the image */
-  }
-  
-  .footer {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    font-size: 14px;
-  }
-  .footer a {
-    color: #f39c12;
-    transition: color 0.3s ease;
-  }
-  .footer a:hover {
-    color: #f1c40f; /* Lighter accent on hover */
-  }
-  
-  
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('img/GettyImages-1442286876.webp'); 
+  background-size: cover;  
+  background-position: center; 
+  background-attachment: fixed;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
 
-  /*new code*/
-  .contact-section {
-    display: flex;
-    padding: 50px; /* Padding for the section */
-    background-color: #f9f9f9; /* Light gray background */
-  }
-  
-  .contact-image {
-    flex: 1; /* Take up 50% of the space */
-    display: flex;
-    justify-content: center; /* Center the image */
-    align-items: center; /* Center the image vertically */
-  }
-  
-  .contact-form {
-    flex: 1; /* Take up 50% of the space */
-    padding: 20px; /* Add padding */
-  }
-  
-  .airplane-img {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 400px; /* Limit max height for the image */
-  }
-  
-  .contact-form h2 {
-    margin-bottom: 20px; /* Space below heading */
-  }
-  
-  .contact-form label {
-    margin-top: 10px; /* Space above labels */
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submit-btn {
-    background-color: #f0a500;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .submit-btn:hover {
-    background-color: #d48806;
-  }
+.header .logo {
+  font-size: 22px; 
+  font-weight: bold;
+  letter-spacing: 1px; 
+  color: #ffffff; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
+  transition: color 0.3s ease; 
+}
 
- 
+.header .logo:hover {
+  color: #f0a500; 
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.header ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #f0a500; 
+}
+
+.about-us-section {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 50px; 
+  background-color: transparent; 
+}
+
+.about-us-text {
+  flex: 1; 
+  margin-right: 20px; 
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.about-us-image {
+  flex: 1;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+.footer a {
+  color: #f39c12;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #f1c40f;
+}
+
+.contact-section {
+  display: flex;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.airplane-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background-color: #f0a500;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #d48806;
+}

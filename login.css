@@ -27,7 +27,7 @@ body {
 }
 
 .header .logo:hover {
-    color: #f0a500; /* Change this color to your desired hover color */
+    color: #f0a500; 
   }
 
 .header ul {
@@ -118,11 +118,11 @@ body {
 }
 
 .footer {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.5); 
     color: white;
     text-align: center;
     padding: 10px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); 
     font-size: 14px;
   }
   .footer a {
@@ -130,5 +130,5 @@ body {
     transition: color 0.3s ease;
   }
   .footer a:hover {
-    color: #f1c40f; /* Lighter accent on hover */
+    color: #f1c40f; 
   }

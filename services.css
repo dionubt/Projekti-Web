@@ -50,19 +50,19 @@ body {
   
   
   .services-section {
-    padding: 50px; /* Add padding to the section */
-    background-color: #f9f9f9; /* Light gray background */
-    text-align: center; /* Center align the text */
+    padding: 50px; 
+    background-color: #f9f9f9; 
+    text-align: center; 
   }
   
   .services-section h2 {
-    margin-bottom: 30px; /* Space below heading */
+    margin-bottom: 30px; 
   }
   
   .services-container {
     display: flex;
-    justify-content: space-around; /* Distribute space between items */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
   }
   
   .service-item {
@@ -71,36 +71,36 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 10px;
-    flex: 0 1 22%; /* Flex item takes 22% of the width */
-    position: relative; /* Position for button */
+    flex: 0 1 22%;
+    position: relative; 
   }
   
   .service-image {
-    width: 100%; /* Make the image take the full width of the container */
-    border-radius: 8px; /* Rounded corners for images */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    border-radius: 8px; 
+    height: auto; 
   }
   
   .service-item h3 {
-    margin: 10px 0; /* Space above and below headings */
+    margin: 10px 0;
   }
   
   .service-item p {
-    color: #555; /* Gray text for description */
+    color: #555; 
   }
   
   .book-btn {
-    background-color: #f0a500; /* Orange background */
+    background-color: #f0a500;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     padding: 10px;
-    margin-top: 15px; /* Space above the button */
+    margin-top: 15px; 
     transition: background-color 0.3s;
   }
   
   .book-btn:hover {
-    background-color: #d48806; /* Darker orange on hover */
+    background-color: #d48806; 
   }
   

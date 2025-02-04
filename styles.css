@@ -1,19 +1,19 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('img/GettyImages-1442286876.webp'); /* Add your background image */
+  background-image: url('img/GettyImages-1442286876.webp'); 
   background-size: cover;  
   background-position: center; 
   background-attachment: fixed;
 
-  /* Flexbox adjustments to ensure footer stays at the bottom */
+  
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
+  min-height: 100vh; 
 }
 
 .intro-section {
-  flex-grow: 1; /* This will make the intro section take up the available space */
+  flex-grow: 1; 
 }
 
 .header {
@@ -30,13 +30,13 @@ body {
   font-size: 22px; 
   font-weight: bold;
   letter-spacing: 1px; 
-  color: #ffffff; /* Default color */
+  color: #ffffff; 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
-  transition: color 0.3s ease; /* Smooth transition */
+  transition: color 0.3s ease; 
 }
 
 .header .logo:hover {
-  color: #f0a500; /* Change this color to your desired hover color */
+  color: #f0a500; 
 }
 
 .header ul {
@@ -75,38 +75,38 @@ body {
   text-align: center;
   margin: 50px 0;
   padding: 30px;
-  position: relative; /* Allow for positioning of pseudo-elements if needed */
+  position: relative; 
 }
 
 .intro-section h1 {
-  font-size: 2.5rem; /* Smaller font size for the heading */
-  color: #fff; /* White color for contrast */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
-  margin-bottom: 15px; /* Spacing below the heading */
-  background-color: #f0a500; /* Orange background with transparency */
-  padding: 5px; /* Add some padding for the backgroud */
-  display: inline-block; /* Allows background to wrap around the text */
+  font-size: 2.5rem; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  margin-bottom: 15px; 
+  background-color: #f0a500; 
+  padding: 5px;
+  display: inline-block; 
 }
 
 .intro-section p {
-  font-size: 1.2rem; /* Smaller font size for the paragraph */
-  color: #fff; /* White color for contrast */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for better readability */
-  max-width: 800px; /* Limit the width for readability */
-  margin: 0 auto; /* Center the paragraph */
-  line-height: 1.6; /* Improved line spacing */
-  padding: 10px; /* Padding around the text */
-  background-color: rgba(0, 0, 0, 0.8); /* Darker transparent background */
-  border-radius: 8px; /* Rounded corners for the background */
+  font-size: 1.2rem; 
+  color: #fff; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+  max-width: 800px; 
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 10px; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  border-radius: 8px; 
 }
 
-/* Footer Styles */
+
 .footer {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.5); 
   color: white;
   text-align: center;
   padding: 10px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); 
   font-size: 14px;
 }
 .footer a {
@@ -114,5 +114,5 @@ body {
   transition: color 0.3s ease;
 }
 .footer a:hover {
-  color: #f1c40f; /* Lighter accent on hover */
+  color: #f1c40f; 
 }

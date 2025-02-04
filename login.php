@@ -1,51 +1,56 @@
 <?php
-// Start the session
-session_start();
+// login.php
 
 // Database connection
 $host = 'localhost';
-$dbname = 'flyhigh';
-$username = 'root';
-$password = '';
+$db   = 'flyhigh';
+$user = 'root'; // default username for XAMPP
+$pass = '';     // default password for XAMPP
+$charset = 'utf8mb4';
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-// Handle login
+// Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user = $_POST['username'];
-    $pass = $_POST['password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     // Fetch user from the database
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username");
-    $stmt->bindParam(':username', $user);
-    $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt = $pdo->prepare('SELECT * FROM clients WHERE username = ?');
+    $stmt->execute([$username]);
+    $user = $stmt->fetch();
 
-    if ($result && password_verify($pass, $result['password'])) {
-        // Successful login, start session and store user data
-        $_SESSION['user_id'] = $result['id'];
-        $_SESSION['role'] = $result['role'];  // Store the role in the session
+    if ($user && password_verify($password, $user['password'])) {
+        // Start a session and store user data
+        session_start();
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['is_admin'] = $user['is_admin'];
 
         // Redirect based on user role
-        if ($result['role'] === 'admin') {
-            header("Location: admin_dashboard.php"); // Admin dashboard
+        if ($user['is_admin'] == 1) {
+            header('Location: admin_dashboard.php'); // Redirect to admin dashboard
         } else {
-            header("Location: user_dashboard.php"); // Regular user dashboard
+            header('Location: user_dashboard.php'); // Redirect to user dashboard
         }
-        exit;
+        exit();
     } else {
-        // Failed login
-        echo "<script>alert('Invalid username or password');</script>";
+        echo "Invalid username or password.";
     }
 }
 ?>
 
-<!-- Login Page HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <li><a href="about.php">About</a></li>
             <li><a href="services.php">Services</a></li>
             <li><a href="contact.php">Contact</a></li>
-            |<li><a href="login.php">Log In</a></li>
+            <li><a href="login.php">Log In</a></li>
             <li><a href="signup.php">Sign Up</a></li>
         </ul>
     </header>

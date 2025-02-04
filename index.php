@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FlyHigh</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
   <header class="header">
@@ -18,7 +18,6 @@
             <li><a href="signup.php">Sign Up</a></li>
     </ul>
   </header>
-
   
 
   <div class="intro-section">

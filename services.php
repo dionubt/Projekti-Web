@@ -24,7 +24,6 @@
     <h2>Our Services</h2>
     <div class="services-container">
       <?php
-      // Array of destinations
       $destinations = [
         ['Rome', 'img/Temple-of-Saturn-Arch-Septimius-Severus-Forum.webp', 'Experience the rich history and culture of Rome.'],
         ['Paris', 'img/paris-city-lights.jpg', 'Explore the romantic city of Paris.'],
@@ -35,7 +34,7 @@
         ['Madrid', 'img/madrid-daytime-town-square-cityscape-wallpaper-preview.jpg', 'Immerse yourself in Madrid\'s art scene.']
       ];
 
-      // Display each destination
+      
       foreach ($destinations as $destination) {
           echo '
           <div class="service-item">
@@ -57,20 +56,20 @@
   </section>
 
   <?php
-  // Process the booking form
+  
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $destination = $_POST['destination'];
       $name = $_POST['name'];
       $email = $_POST['email'];
 
-      // Database connection
+      
       $conn = new mysqli('localhost', 'root', '', 'flyhigh');
 
       if ($conn->connect_error) {
           die('Connection failed: ' . $conn->connect_error);
       }
 
-      // Insert booking into database
+      
       $stmt = $conn->prepare('INSERT INTO bookings (destination, user_name, user_email) VALUES (?, ?, ?)');
       $stmt->bind_param('sss', $destination, $name, $email);
 

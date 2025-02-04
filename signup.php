@@ -1,53 +1,38 @@
 <?php
-// Database connection
+
 $host = 'localhost';
-$dbname = 'flyhigh';
-$username = 'root';
-$password = '';
+$db   = 'flyhigh';
+$user = 'root'; 
+$pass = '';    
+$charset = 'utf8mb4';
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-// Handle sign-up
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $role = 'user';  // Default role is 'user'
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // Check if username or email already exists
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username OR email = :email");
-    $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':email', $email);
-    $stmt->execute();
+    
+    $stmt = $pdo->prepare('INSERT INTO clients (username, email, password) VALUES (?, ?, ?)');
+    $stmt->execute([$username, $email, $password]);
 
-    if ($stmt->rowCount() > 0) {
-        echo "<script>alert('Username or email already exists');</script>";
-    } else {
-        // Hash the password
-        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-        // Insert new user into the database
-        $stmt = $pdo->prepare("INSERT INTO users (username, email, password, role) VALUES (:username, :email, :password, :role)");
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $hashedPassword);
-        $stmt->bindParam(':role', $role); // Insert the role
-
-        if ($stmt->execute()) {
-            echo "<script>alert('Sign-up successful!'); window.location.href = 'login.php';</script>";
-        } else {
-            echo "<script>alert('Sign-up failed. Please try again.');</script>";
-        }
-    }
+    echo "Registration successful!";
 }
 ?>
 
-<!-- Sign-Up Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
